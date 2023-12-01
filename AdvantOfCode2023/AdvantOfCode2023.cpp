@@ -8,28 +8,6 @@ int main()
 	firstDayResult->RunAssignment();
 
 	delete firstDayResult;
- //   std::string firstExample = "labc2";
-	//int firstValue = 0;
-	//int secondValue = 0;
-
-	//for (int i = 0; i < firstExample.length(); i++)
-	//{
-	//	if (firstValue == 0 && isdigit(firstExample.at(i)))
-	//	{
-	//		std::cout << firstExample[i] << std::endl;
-
-	//		//'0' is char 48. '1' is char 49. So we subtract from it to convert the char number to a int.
-	//		firstValue = firstExample[i] - '0';
-	//		secondValue = firstExample[i] - '0';
-	//	}
-	//	else if (isdigit(firstExample.at(i)))
-	//	{
-	//		std::cout << firstExample[i] << std::endl;
-	//		secondValue = firstExample[i] - '0';
-	//	}
-	//}
-
-	//std::cout << firstValue << secondValue << std::endl;
 }
 
 
