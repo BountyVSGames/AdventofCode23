@@ -2,19 +2,27 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 class FirstDayResult
 {
 public:
 	FirstDayResult();
 
-	void RunAssignment();
+	void RunAssignmentPart1();
+	void RunAssignmentPart2();
 private:
-	int GetCalibrationValue(std::string line);
+	int GetCalibrationValueWithNumbers(std::string line);
+	int GetCallibrationValueWithLetterAndLetters(std::string line);
+
+	int CompareString(std::string& originalString);
+
+	std::vector<std::string> m_numbersInString;
 
 	std::ifstream m_lineToRead;
 	std::ifstream m_fileToRead;
 
-	int m_totalValue;
+	int m_totalValueAssignment1;
+	int m_totalValueAssignment2;
 };
 

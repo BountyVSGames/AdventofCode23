@@ -2,10 +2,21 @@
 
 FirstDayResult::FirstDayResult()
 {
-    m_totalValue = 0;
+    m_totalValueAssignment1 = 0;
+    m_totalValueAssignment2 = 0;
+
+    m_numbersInString.push_back("one");
+    m_numbersInString.push_back("two");
+    m_numbersInString.push_back("three");
+    m_numbersInString.push_back("four");
+    m_numbersInString.push_back("five");
+    m_numbersInString.push_back("six");
+    m_numbersInString.push_back("seven");
+    m_numbersInString.push_back("eight");
+    m_numbersInString.push_back("nine");
 }
 
-void FirstDayResult::RunAssignment()
+void FirstDayResult::RunAssignmentPart1()
 {
     std::string line;
     std::ifstream myfile("CalibrationDocumentDay1.txt");
@@ -14,7 +25,7 @@ void FirstDayResult::RunAssignment()
     {
         while (getline(myfile, line))
         {
-            m_totalValue += GetCalibrationValue(line);
+            m_totalValueAssignment1 += GetCalibrationValueWithNumbers(line);
         }
 
         myfile.close();
@@ -24,9 +35,32 @@ void FirstDayResult::RunAssignment()
         std::cout << "Unable to open file";
     }
 
-    std::cout << m_totalValue << std::endl;
+    std::cout << m_totalValueAssignment1 << std::endl;
 }
-int FirstDayResult::GetCalibrationValue(std::string line)
+void FirstDayResult::RunAssignmentPart2()
+{
+    std::string line;
+    std::ifstream myfile("CalibrationDocumentDay1.txt");
+
+    if (myfile.is_open())
+    {
+        while (getline(myfile, line))
+        {
+            int value = GetCallibrationValueWithLetterAndLetters(line);
+            m_totalValueAssignment2 += value;
+        }
+
+        myfile.close();
+    }
+    else
+    {
+        std::cout << "Unable to open file";
+    }
+
+    std::cout << m_totalValueAssignment2 << std::endl;
+}
+
+int FirstDayResult::GetCalibrationValueWithNumbers(std::string line)
 {
     int firstValue = 0;
     int secondValue = 0;
@@ -46,4 +80,38 @@ int FirstDayResult::GetCalibrationValue(std::string line)
     }
 
     return firstValue + secondValue;
+}
+int FirstDayResult::GetCallibrationValueWithLetterAndLetters(std::string line)
+{
+    int firstValue = 0;
+    int secondValue = 0;
+
+    for (int i = 0; i < line.length(); i++)
+    {
+        CompareString(line);
+    }
+
+    return GetCalibrationValueWithNumbers(line);
+}
+
+int FirstDayResult::CompareString(std::string& originalString)
+{
+    int returnIndex = 100;
+    int returnValue = 0;
+    int returnNumberLetterCount = 0;
+
+    for (int i = 0; i < m_numbersInString.size(); i++)
+    {
+        int index = originalString.find(m_numbersInString[i]);
+
+        if (index != std::string::npos)
+        {
+            if (index < returnIndex)
+            {
+                originalString[index + 1] = '0' + (i + 1);
+            }
+        }
+    }
+
+    return returnIndex;
 }

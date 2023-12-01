@@ -5,7 +5,8 @@
 int main()
 {
 	FirstDayResult* firstDayResult = new FirstDayResult();
-	firstDayResult->RunAssignment();
+	firstDayResult->RunAssignmentPart1();
+	firstDayResult->RunAssignmentPart2();
 
 	delete firstDayResult;
 }
