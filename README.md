@@ -1,1 +1,1 @@
-# AdventofCode23
+This is a repo that is used for the Advent of Code 2023 challenge
