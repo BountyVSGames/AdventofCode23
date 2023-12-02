@@ -1,3 +1,6 @@
-﻿  FirstDayResult.cpp
+﻿  AdvantOfCode2023.cpp
+  FirstDayResult.cpp
 C:\Users\boude\Documents\Git\AdventofCode23\AdvantOfCode2023\Source\FirstDayResult.cpp(105,62): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  SecondDayResult.cpp
+  Generating Code...
   AdvantOfCode2023.vcxproj -> C:\Users\boude\Documents\Git\AdventofCode23\AdvantOfCode2023\x64\Debug\AdvantOfCode2023.exe
