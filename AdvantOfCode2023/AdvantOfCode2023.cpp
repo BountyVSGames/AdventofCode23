@@ -1,14 +1,24 @@
 // AdvantOfCode2023.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 #include "Header/FirstDayResult.h"
+#include "Header/SecondDayResult.h"
 
 int main()
 {
 	FirstDayResult* firstDayResult = new FirstDayResult();
+	SecondDayResult* secondDayResult = new SecondDayResult();
+
+	std::cout << "--- First Day Result ---" << std::endl;
+
 	firstDayResult->RunAssignmentPart1();
 	firstDayResult->RunAssignmentPart2();
 
+	std::cout << std::endl << "--- Second Day Result --- " << std::endl;
+
+	secondDayResult->RunAssignmentPart1();
+
 	delete firstDayResult;
+	delete secondDayResult;
 }
 
 

@@ -21,9 +21,15 @@
     <ClCompile Include="Source\FirstDayResult.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\SecondDayResult.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\FirstDayResult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\SecondDayResult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

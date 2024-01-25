@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="AdvantOfCode2023.cpp" />
     <ClCompile Include="Source\FirstDayResult.cpp" />
+    <ClCompile Include="Source\SecondDayResult.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\FirstDayResult.h" />
+    <ClInclude Include="Header\SecondDayResult.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
